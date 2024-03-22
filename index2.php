@@ -34,7 +34,7 @@ if(isset($_GET['continent'])){
 ?>
 
   <div class="container">
-    <h1>Les pays en <?php echo $continent; ?></h1>
+    <h1>Les pays en Ciel <?php echo $continent; ?></h1>
     <div>
      <table class="table">
          <tr>
@@ -55,7 +55,7 @@ if(isset($_GET['continent'])){
           <tr>
             <td> <?php echo $pays->id ?></td>
             <td> <img src="images/drapeau/<?php echo strtolower($pays->Code2) ?>.png"></td>
-            <td> <?php echo $pays->Name ?></td>
+            <td> <a href="Ensemble-donner.php"> <?php echo $pays->Name ?></a></td>
             <td> <?php echo $pays->Population ?></td>
             <td> <?php echo $pays->Continent ?></td>
             <td> <?php echo $pays->SurfaceArea ?></td>
@@ -65,13 +65,7 @@ if(isset($_GET['continent'])){
 
      </table>
     </div>
-    <p>
-        <code>
-      <?php
-        var_dump($desPays[0]);
-        ?>
-        </code>
-    </p>
+ 
     <section class="jumbotron">
       <div class="container">
         <h1 class="jumbotron-heading">Tableau d'objets</h1>
